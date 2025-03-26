@@ -28,7 +28,7 @@ export default function CharitiesPage() {
               </div>
               <h3 className="text-xl font-bold mb-4">1. Register Your Charity</h3>
               <p className="text-gray-600">
-                Create your organization's profile and list the volunteer opportunities you offer.
+                Create your organization&apos;s profile and list the volunteer opportunities you offer.
               </p>
             </div>
             
@@ -99,8 +99,8 @@ export default function CharitiesPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-[var(--primary-light)] rounded-lg p-8 md:p-12 text-white">
             <p className="text-xl mb-6 leading-relaxed italic">
-              "Voluntiera has transformed how we find and manage volunteers. We've been able to connect with skilled 
-              individuals who are passionate about our cause, and the platform makes coordination simple and efficient."
+              &quot;Voluntiera has transformed how we find and manage volunteers. We&apos;ve been able to connect with skilled 
+              individuals who are passionate about our cause, and the platform makes coordination simple and efficient.&quot;
             </p>
             <p className="font-semibold">- Sarah Johnson, Executive Director at Community Hope Foundation</p>
           </div>

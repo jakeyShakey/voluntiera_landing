@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About Voluntiera</h1>
           <p className="text-xl text-white max-w-3xl mx-auto">
-            We're on a mission to connect passionate volunteers with impactful opportunities, 
+            We&apos;re on a mission to connect passionate volunteers with impactful opportunities, 
             making a real difference in communities around the world.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">Accessibility</h3>
                 <p className="text-gray-700">
-                  We're committed to making volunteering accessible to everyone, regardless of background or experience.
+                  We&apos;re committed to making volunteering accessible to everyone, regardless of background or experience.
                 </p>
               </div>
               
@@ -92,8 +92,8 @@ export default function AboutPage() {
           <div className="bg-[var(--primary-light)] rounded-lg p-8 md:p-12 text-white text-center">
             <FaQuoteLeft className="mx-auto mb-6 text-3xl opacity-80" />
             <p className="text-xl md:text-2xl mb-6 leading-relaxed">
-              "Voluntiera has transformed how we connect with volunteers. We're now able to find people 
-              with exactly the skills we need, when we need them. It's made a huge difference to our charity."
+              &quot;Voluntiera has transformed how we connect with volunteers. We&apos;re now able to find people 
+              with exactly the skills we need, when we need them. It&apos;s made a huge difference to our charity.&quot;
             </p>
             <FaQuoteRight className="mx-auto mb-6 text-3xl opacity-80" />
             <p className="font-semibold">Jane Doe, Charity Director</p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold mb-2">Emma Johnson</h3>
                 <p className="text-[var(--primary)] font-semibold mb-3">Co-Founder & CTO</p>
                 <p className="text-gray-600">
-                  Emma's expertise in technology and passion for social impact drives our platform development.
+                  Emma&apos;s expertise in technology and passion for social impact drives our platform development.
                 </p>
               </div>
             </div>

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaHandshake, FaUsers, FaChartLine, FaRegLightbulb } from 'react-icons/fa';
 import HeroSection from '@/components/HeroSection';
 import FeatureCard from '@/components/FeatureCard';
@@ -18,7 +17,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">For Volunteers</h2>
               <p className="text-lg mb-6 text-gray-600 leading-relaxed">
                 Discover meaningful one-off volunteering opportunities that match your skills, interests, and availability. 
-                Whether you're looking to gain experience, make a difference, or meet new people, 
+                Whether you&apos;re looking to gain experience, make a difference, or meet new people, 
                 Voluntiera makes it easy to find the perfect opportunity.
               </p>
               <div className="space-y-4">
@@ -33,7 +32,7 @@ export default function Home() {
                   <FaRegLightbulb className="text-[var(--primary)] text-2xl mt-1" />
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Develop New Skills</h3>
-                    <p className="text-gray-600">Gain valuable experience and enhance your skillset through volunteering while making a difference where it's needed most.</p>
+                    <p className="text-gray-600">Gain valuable experience and enhance your skillset through volunteering while making a difference where it&apos;s needed most.</p>
                   </div>
                 </div>
               </div>

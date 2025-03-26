@@ -39,7 +39,7 @@ export default function ContactPage() {
         subject: '',
         message: '',
       });
-    } catch (error) {
+    } catch (_) {
       setSubmitError('There was a problem submitting your form. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -53,7 +53,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Contact Us</h1>
           <p className="text-xl text-white max-w-3xl mx-auto">
-            Got questions? We'd love to hear from you. Reach out to our team and we'll get back to you as soon as possible.
+            Got questions? We&apos;d love to hear from you. Reach out to our team and we&apos;ll get back to you as soon as possible.
           </p>
         </div>
       </section>
