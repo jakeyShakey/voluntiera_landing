@@ -133,7 +133,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Make a Difference?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Join Voluntiera today and be part of a community that's changing the world for the better.
+            Join Voluntiera today and be part of a community that&apos;s changing the world for the better.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/signup" className="btn-primary bg-white text-[var(--primary)] hover:bg-gray-100">
