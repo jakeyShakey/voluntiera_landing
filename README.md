@@ -96,7 +96,7 @@ This Next.js application can be deployed on various platforms, including:
 
 ## Color Scheme
 
-The primary color scheme used in this project is:
+The primary color scheme used in this project is a green and white color scheme:
 - Primary: hsla(167.9, 86.11%, 28.24%, 1)
 
 ## License
