@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const HeroSection = () => {
   return (
@@ -39,12 +40,15 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative rounded-lg overflow-hidden shadow-2xl"
+              className="relative rounded-lg overflow-hidden shadow-2xl h-[400px]"
             >
-              {/* Replace with actual hero image */}
-              <div className="bg-[var(--primary-light)] h-[400px] w-full flex items-center justify-center">
-                <span className="text-white text-xl">Hero Image Placeholder</span>
-              </div>
+              <Image 
+                src="/hero-image.jpg"
+                alt="Volunteers making a difference" 
+                fill 
+                className="object-cover"
+                priority
+              />
             </motion.div>
           </div>
         </div>

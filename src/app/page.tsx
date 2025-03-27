@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FaHandshake, FaUsers, FaChartLine, FaRegLightbulb } from 'react-icons/fa';
 import HeroSection from '@/components/HeroSection';
 import FeatureCard from '@/components/FeatureCard';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -44,10 +45,14 @@ export default function Home() {
             </div>
             <div className="w-full md:w-1/2 relative h-[400px]">
               <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xl">
-                {/* Replace with actual image */}
-                <div className="bg-[var(--primary-light)] w-full h-full flex items-center justify-center">
-                  <span className="text-white text-xl">Volunteer Image Placeholder</span>
-                </div>
+                {/* Next.js Image component for volunteer image */}
+                <Image 
+                  src="/volunteer-image.jpg" 
+                  alt="Volunteer opportunities" 
+                  fill 
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -88,10 +93,14 @@ export default function Home() {
             </div>
             <div className="w-full md:w-1/2 relative h-[400px]">
               <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xl">
-                {/* Replace with actual image */}
-                <div className="bg-[var(--primary-light)] w-full h-full flex items-center justify-center">
-                  <span className="text-white text-xl">Charity Image Placeholder</span>
-                </div>
+                {/* Next.js Image component for charity image */}
+                <Image 
+                  src="/charity-image.jpg" 
+                  alt="Charity opportunities" 
+                  fill 
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
