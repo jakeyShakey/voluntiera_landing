@@ -28,10 +28,36 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setSubmitError('');
     
-    // Simulate form submission
     try {
-      // In a real app, you would submit to your API endpoint here
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Create FormData object to send to FormSubmit
+      const form = e.target as HTMLFormElement;
+      const formDataObj = new FormData(form);
+      
+      // Add form data manually to ensure all fields are included
+      formDataObj.append('name', formData.name);
+      formDataObj.append('email', formData.email);
+      formDataObj.append('subject', formData.subject);
+      formDataObj.append('message', formData.message);
+      
+      // Add FormSubmit configuration fields
+      formDataObj.append('_captcha', 'true');
+      formDataObj.append('_subject', `New Contact Form: ${formData.subject}`);
+      formDataObj.append('_template', 'table');
+      formDataObj.append('_replyto', formData.email);
+      
+      // Send to FormSubmit service
+      const response = await fetch('https://formsubmit.co/ajax/hello@voluntiera.co.uk', {
+        method: 'POST',
+        body: formDataObj,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+      
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+      
       setSubmitSuccess(true);
       setFormData({
         name: '',
@@ -39,8 +65,9 @@ export default function ContactPage() {
         subject: '',
         message: '',
       });
-    } catch {
+    } catch (error) {
       setSubmitError('There was a problem submitting your form. Please try again.');
+      console.error(error);
     } finally {
       setIsSubmitting(false);
     }
@@ -78,6 +105,12 @@ export default function ContactPage() {
                         {submitError}
                       </div>
                     )}
+                    
+                    {/* FormSubmit configuration fields */}
+                    <input type="hidden" name="_captcha" value="true" />
+                    <input type="hidden" name="_subject" value={`New Contact Form: ${formData.subject}`} />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_replyto" value={formData.email} />
                     
                     <div className="mb-4">
                       <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -165,7 +198,7 @@ export default function ContactPage() {
                     <FaEnvelope className="text-2xl mt-1" />
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Email</h3>
-                      <p>info@voluntiera.com</p>
+                      <p>hello@voluntiera.co.uk</p>
                     </div>
                   </div>
                   
@@ -181,7 +214,7 @@ export default function ContactPage() {
                     <FaMapMarkerAlt className="text-2xl mt-1" />
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Location</h3>
-                      <p>123 Charity Lane</p>
+                      <p>56 Rutland Gardens</p>
                       <p>London, UK</p>
                     </div>
                   </div>

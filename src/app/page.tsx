@@ -17,23 +17,27 @@ export default function Home() {
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">For Volunteers</h2>
               <p className="text-lg mb-6 text-gray-600 leading-relaxed">
-                Discover meaningful one-off volunteering opportunities that match your skills, interests, and availability. 
-                Whether you&apos;re looking to gain experience, make a difference, or meet new people, 
-                Voluntiera makes it easy to find the perfect opportunity.
+                For individuals passionate about supporting others and their communities,
+                discover meaningful one-off volunteering opportunities tailored to your skills, interests, and availability. 
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <FaHandshake className="text-[var(--primary)] text-2xl mt-1" />
+                  <div className="flex-shrink-0 w-8">
+                    <FaHandshake className="text-[var(--primary)] text-2xl" />
+                  </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Find Meaningful Opportunities</h3>
                     <p className="text-gray-600">Get reccomended opportunities based on your skills and interests. No endless scrollig through job boards.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <FaRegLightbulb className="text-[var(--primary)] text-2xl mt-1" />
+                  <div className="flex-shrink-0 w-8">
+                    <FaRegLightbulb className="text-[var(--primary)] text-2xl" />
+                  </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Develop New Skills</h3>
-                    <p className="text-gray-600">Gain valuable experience and enhance your skillset through volunteering while making a difference where it&apos;s needed most.</p>
+                    <h3 className="text-xl font-semibold mb-2">Tailored to your schedule</h3>
+                    <p className="text-gray-600">We know making a regular commitment can be overwhelming. Whether you have a few hours a week or just one weekend a month, 
+                      Voluntiera gives you a variety of impactful opportunities that fit around your availability.</p>
                   </div>
                 </div>
               </div>
@@ -148,7 +152,7 @@ export default function Home() {
             <Link href="/signup" className="btn-primary bg-white text-[var(--primary)] hover:bg-gray-100">
               Sign Up Now
             </Link>
-            <Link href="/contact" className="btn-secondary border-white text-white hover:bg-white hover:text-[var(--primary)]">
+            <Link href="/contact" className="btn-primary bg-white text-[var(--primary)] hover:bg-gray-100">
               Contact Us
             </Link>
           </div>

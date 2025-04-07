@@ -22,17 +22,23 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">Our Story</h2>
             <div className="mb-10 text-lg text-gray-700 leading-relaxed space-y-6">
               <p>
-                Voluntiera was born from a simple observation: while many people want to volunteer their time and skills, 
-                finding the right opportunity can be challenging. Similarly, charities often struggle to connect with 
-                volunteers who have the specific skills they need.
+                Voluntiera was founded by two friends on a mission to make volunteering more accessible, impactful, 
+                and fulfilling for everyone. Seeing the growing need for dedicated volunteers in our communities, 
+                we started this platform to bridge the gap between those who want to help and the organisations that 
+                need their support. Our goal is simple: to create a place where passionate people and meaningful causes 
+                connect effortlessly.
               </p>
               <p>
-                Founded in 2023, our platform aims to bridge this gap by using smart matching technology to connect 
-                volunteers with opportunities that align with their skills, interests, and availability.
+                What began as a conversation between friends about the volunteering shortages we saw around us has grown 
+                into a movement. Our platform connects passionate people with causes that need their support, all 
+                while keeping it simple, flexible, and rewarding. From one-time events to ongoing commitments, 
+                we&apos;re here to help you find opportunities that fit your values, interests and schedule.
               </p>
               <p>
-                What started as a simple idea has grown into a thriving community of volunteers and organizations 
-                working together to make a positive impact.
+                Join us in building a stronger, more connected community one act of kindness at a time. Whether 
+                you&apos;re a seasoned volunteer or new to giving back, we welcome you to our growing network 
+                of changemakers. Together, we&apos;re making it easier than ever to lend a hand, support a cause, 
+                and truly make a difference.
               </p>
             </div>
           </div>
