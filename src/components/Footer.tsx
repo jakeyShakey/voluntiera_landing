@@ -18,7 +18,7 @@ const Footer = () => {
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebook className="text-white hover:text-gray-300 text-xl" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://instagram.com/voluntiera" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram className="text-white hover:text-gray-300 text-xl" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -64,8 +64,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-gray-300 transition duration-300">
-                  FAQs
+                <Link href="/cookie-policy" className="hover:text-gray-300 transition duration-300">
+                  Cookie Policy
                 </Link>
               </li>
               <li>

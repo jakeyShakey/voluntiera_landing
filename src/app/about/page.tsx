@@ -92,7 +92,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
+      {/* Testimonial Section
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-[var(--primary-light)] rounded-lg p-8 md:p-12 text-white text-center">
@@ -105,7 +105,7 @@ export default function AboutPage() {
             <p className="font-semibold">Jane Doe, Charity Director</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
       <section className="py-16 bg-gray-50">
