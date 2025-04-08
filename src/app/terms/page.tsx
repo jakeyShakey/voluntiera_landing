@@ -71,7 +71,7 @@ export default function TermsAndConditionsPage() {
 
               <h4 className="text-xl font-bold mt-8 mb-4">7. Limitation of Liability</h4>
               <p className="mb-4">
-                Voluntiera provides its platform and services 'as is' without any warranties or guarantees. We do not guarantee that our services will be uninterrupted, secure, or error-free.
+                Voluntiera provides its platform and services &apos;as is&apos; without any warranties or guarantees. We do not guarantee that our services will be uninterrupted, secure, or error-free.
               </p>
               <ul className="list-disc ml-6 mb-6">
                 <li className="mb-2"><strong>Volunteers and Charities</strong>: Voluntiera is not liable for any incidents, damages, or losses that occur during or as a result of volunteer placements or charity interactions. We encourage both volunteers and charities to exercise their own judgement when participating in activities facilitated through the platform.</li>
