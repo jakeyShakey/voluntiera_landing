@@ -214,16 +214,9 @@ export default function ContactPage() {
                     <FaMapMarkerAlt className="text-2xl mt-1" />
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Location</h3>
-                      <p>56 Rutland Gardens</p>
                       <p>London, UK</p>
                     </div>
                   </div>
-                </div>
-                
-                <div className="mt-10">
-                  <h3 className="font-semibold text-lg mb-3">Office Hours</h3>
-                  <p className="mb-1">Monday - Friday: 9:00 AM - 5:00 PM</p>
-                  <p>Saturday - Sunday: Closed</p>
                 </div>
               </div>
             </div>

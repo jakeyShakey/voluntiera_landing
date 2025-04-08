@@ -37,7 +37,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Tailored to your schedule</h3>
                     <p className="text-gray-600">We know making a regular commitment can be overwhelming. Whether you have a few hours a week or just one weekend a month, 
-                      Voluntiera gives you a variety of impactful opportunities that fit around your availability.</p>
+                      Voluntiera gives you a variety of impactful opportunities  across the charity ecosystem that fit around your availability.</p>
                   </div>
                 </div>
               </div>

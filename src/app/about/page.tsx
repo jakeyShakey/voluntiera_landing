@@ -21,7 +21,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-8 text-center">Our Story</h2>
             <div className="mb-10 text-lg text-gray-700 leading-relaxed space-y-6">
               <p>
-                Voluntiera was founded by two friends on a mission to make volunteering more accessible, impactful, 
+                Voluntiera was founded by three friends on a mission to make volunteering more accessible, impactful, 
                 and fulfilling for everyone. Seeing the growing need for dedicated volunteers in our communities, 
                 we started this platform to bridge the gap between those who want to help and the organisations that 
                 need their support. Our goal is simple: to create a place where passionate people and meaningful causes 

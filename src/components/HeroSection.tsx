@@ -19,7 +19,7 @@ const HeroSection = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Volunteering <span className="text-[var(--primary)]">Reimagined</span>
                 <br />
-                <span className="text-2xl md:text-3xl lg:text-4xl">one-off actions, endless impact</span>
+                <span className="text-2xl md:text-3xl lg:text-4xl">One-off actions, endless impact</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Connecting passionate volunteers with impactful opportunities. 

@@ -84,8 +84,8 @@ const Footer = () => {
           {/* Contact */}
           <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p className="mb-2">Email: info@voluntiera.com</p>
-            <p>Location: London, UK</p>
+            <p className="mb-2">info@voluntiera.com</p>
+            <p>London, UK</p>
           </div>
         </div>
 

@@ -29,7 +29,7 @@ export default function VolunteersPage() {
               </div>
               <h3 className="text-xl font-bold mb-4">1. Schedule Your Time</h3>
               <p className="text-gray-600">
-                Choose when you are free around your schedule. Volunteer once or on a recurring basis.
+                Choose when you are free around your schedule. Volunteer once or as often as you like.
               </p>
             </div>
 
@@ -39,7 +39,7 @@ export default function VolunteersPage() {
               </div>
               <h3 className="text-xl font-bold mb-4">2. Find Opportunities</h3>
               <p className="text-gray-600">
-                Get reccomended volunteering opportunities that match your skills, interests, and availability.
+                Get recommended volunteering opportunities that match your skills, interests, and availability.
               </p>
             </div>
             
@@ -62,21 +62,7 @@ export default function VolunteersPage() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">Benefits of Volunteering</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">Skill Development</h3>
-                <p className="text-gray-700">
-                  Gain valuable experience and enhance your skill set through meaningful volunteer work.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">Networking</h3>
-                <p className="text-gray-700">
-                  Connect with like-minded individuals and organizations in your community.
-                </p>
-              </div>
-              
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">                
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">Personal Growth</h3>
                 <p className="text-gray-700">
@@ -88,6 +74,19 @@ export default function VolunteersPage() {
                 <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">Community Impact</h3>
                 <p className="text-gray-700">
                   Make a tangible difference in your community by supporting causes you care about.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">Skill Development</h3>
+                <p className="text-gray-700">
+                  Gain valuable experience and enhance your skill set through meaningful volunteer work.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">Networking</h3>
+                <p className="text-gray-700">
+                  Connect with like-minded individuals and organizations in your community.
                 </p>
               </div>
             </div>
