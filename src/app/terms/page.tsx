@@ -20,7 +20,7 @@ export default function TermsAndConditionsPage() {
               </p>
               
               <p>
-                Welcome to Voluntiera. By accessing or using our website and services, you agree to comply with and be bound by these Terms & Conditions. Please read these terms carefully, as they set forth your rights and obligations regarding the use of Voluntiera's platform.
+                Welcome to Voluntiera. By accessing or using our website and services, you agree to comply with and be bound by these Terms & Conditions. Please read these terms carefully, as they set forth your rights and obligations regarding the use of Voluntiera&apos;s platform.
               </p>
 
               <h4 className="text-xl font-bold mt-8 mb-4">1. Introduction</h4>
@@ -44,13 +44,13 @@ export default function TermsAndConditionsPage() {
               </p>
               <ul className="list-disc ml-6 mb-6">
                 <li className="mb-2">Use the platform to engage in any illegal activities or solicit others to do so.</li>
-                <li className="mb-2">Post or share content that is harmful, offensive, or violates another individual's privacy or intellectual property rights.</li>
+                <li className="mb-2">Post or share content that is harmful, offensive, or violates another individual&apos;s privacy or intellectual property rights.</li>
                 <li className="mb-2">Attempt to interfere with the security or proper functioning of the platform, including unauthorised access or disruption.</li>
               </ul>
 
               <h4 className="text-xl font-bold mt-8 mb-4">4. Volunteering and Charitable Opportunities</h4>
               <p className="mb-4">
-                Voluntiera's role is to facilitate connections between volunteers and charities; we do not vet, endorse, or guarantee any specific volunteer opportunities. Volunteers and charities are responsible for determining whether a volunteer placement or project is suitable and safe.
+                Voluntiera&apos;s role is to facilitate connections between volunteers and charities; we do not vet, endorse, or guarantee any specific volunteer opportunities. Volunteers and charities are responsible for determining whether a volunteer placement or project is suitable and safe.
               </p>
               <p className="mb-2">
                 <strong>Volunteers</strong>: By signing up, you agree to take part in volunteer roles at your own risk. You are responsible for confirming any necessary requirements with the respective organisation

@@ -25,7 +25,7 @@ export default function CookiePolicyPage() {
 
               <h4 className="text-xl font-bold mt-8 mb-4">1. What Are Cookies?</h4>
               <p>
-                Cookies are small text files that are stored on your device when you visit our website. They allow us to recognise your device and remember certain information about your preferences or past actions on the site. Cookies help us improve our website's functionality and enhance your user experience.
+                Cookies are small text files that are stored on your device when you visit our website. They allow us to recognise your device and remember certain information about your preferences or past actions on the site. Cookies help us improve our website&apos;s functionality and enhance your user experience.
               </p>
 
               <h4 className="text-xl font-bold mt-8 mb-4">2. Types of Cookies We Use</h4>
@@ -52,12 +52,12 @@ export default function CookiePolicyPage() {
 
               <h4 className="text-xl font-bold mt-8 mb-4">4. Third-Party Cookies</h4>
               <p>
-                We may allow certain trusted third parties to place cookies on our website to help us understand user behaviour, improve our website's functionality, and deliver relevant content. These third parties include analytics providers like Google Analytics. Please refer to their privacy policies for more information on how they use cookies.
+                We may allow certain trusted third parties to place cookies on our website to help us understand user behaviour, improve our website&apos;s functionality, and deliver relevant content. These third parties include analytics providers like Google Analytics. Please refer to their privacy policies for more information on how they use cookies.
               </p>
 
               <h4 className="text-xl font-bold mt-8 mb-4">5. Your Cookie Choices</h4>
               <p>
-                When you first visit our website, you'll see a cookie banner asking for your consent to use certain types of cookies. You can manage your choices at any time by adjusting your browser settings to accept or decline cookies. However, please note that disabling certain cookies may affect the functionality of our website.
+                When you first visit our website, you&apos;ll see a cookie banner asking for your consent to use certain types of cookies. You can manage your choices at any time by adjusting your browser settings to accept or decline cookies. However, please note that disabling certain cookies may affect the functionality of our website.
               </p>
               <p className="mt-4">
                 For more information on managing cookies, you can visit www.aboutcookies.org or www.allaboutcookies.org.

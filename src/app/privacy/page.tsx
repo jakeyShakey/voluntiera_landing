@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
 
               <h4 className="text-xl font-bold mt-8 mb-4">4. Data Sharing Between Volunteers and Charities</h4>
               <p>
-                We share relevant volunteer data with charities and relevant charity data with volunteers as part of the Voluntiera platform's functionality. This data sharing is strictly for the purposes of connecting volunteers with organisations that align with their interests and skills. All parties are required to respect data confidentiality as outlined in this Privacy Policy.
+                We share relevant volunteer data with charities and relevant charity data with volunteers as part of the Voluntiera platform&apos;s functionality. This data sharing is strictly for the purposes of connecting volunteers with organisations that align with their interests and skills. All parties are required to respect data confidentiality as outlined in this Privacy Policy.
               </p>
 
               <h4 className="text-xl font-bold mt-8 mb-4">5. Data Storage, Retention and Disposal</h4>
