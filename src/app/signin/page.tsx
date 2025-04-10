@@ -25,7 +25,7 @@ export default function SignInPage() {
                 <div>
                   <h2 className="text-xl font-semibold text-blue-700 mb-2">Closed Pilot Coming Soon</h2>
                   <p className="text-gray-700 mb-4">
-                    We're currently preparing for our closed pilot program. Sign-in functionality will be available once the pilot launches.
+                    We&apos;re currently preparing for our closed pilot program. Sign-in functionality will be available once the pilot launches.
                   </p>
                   <p className="text-gray-700 mb-2">
                     Interested in participating? Please register your interest by signing up as a:
