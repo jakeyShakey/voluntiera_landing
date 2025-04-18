@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
                 <li className="mb-2"><strong>Personal Details</strong>: Name, email address, and other information you voluntarily provide when completing our sign-up forms.</li>
                 <li className="mb-2"><strong>Organisational Information</strong>: If you represent a charity, we may collect data such as organisation name, address, and contact details of representatives to facilitate our services.</li>
                 <li className="mb-2"><strong>Technical Data</strong>: When you use our website, we may automatically collect information such as your IP address, browser type, operating system, and interaction with the website. We use cookies and similar tracking technologies to collect this information. Please see our Cookie Policy for more details.</li>
-                <li className="mb-2"><strong>Local Storage Data</strong>: We store certain preferences and settings in your browser's local storage, such as notification preferences and interface settings, to enhance your user experience. This information is stored on your device and is not transmitted to our servers.</li>
+                <li className="mb-2"><strong>Local Storage Data</strong>: We store certain preferences and settings in your browser&apos;s local storage, such as notification preferences and interface settings, to enhance your user experience. This information is stored on your device and is not transmitted to our servers.</li>
               </ul>
 
               <h4 className="text-xl font-bold mt-8 mb-4">2. How we use your information</h4>
@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
 
               <h4 className="text-xl font-bold mt-8 mb-4">4. Data Sharing Between Volunteers and Charities</h4>
               <p>
-                We share relevant volunteer data with charities and relevant charity data with volunteers as part of the Voluntiera platform's functionality. This data sharing is strictly for the purposes of connecting volunteers with organisations that align with their interests and skills. All parties are required to respect data confidentiality as outlined in this Privacy Policy.
+                We share relevant volunteer data with charities and relevant charity data with volunteers as part of the Voluntiera platform&apos;s functionality. This data sharing is strictly for the purposes of connecting volunteers with organisations that align with their interests and skills. All parties are required to respect data confidentiality as outlined in this Privacy Policy.
               </p>
 
               <h4 className="text-xl font-bold mt-8 mb-4">5. Browser Storage Technologies</h4>
@@ -64,10 +64,10 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="list-disc ml-6 mb-6">
                 <li className="mb-2"><strong>Cookies</strong>: These are small text files that are stored on your device and help us provide essential features and analyze website usage. See our Cookie Policy for more details.</li>
-                <li className="mb-2"><strong>Local Storage</strong>: We use browser local storage to remember your preferences, such as when you've dismissed our announcement banner, to provide a better browsing experience. This data is stored on your device and is not transmitted back to our servers.</li>
+                <li className="mb-2"><strong>Local Storage</strong>: We use browser local storage to remember your preferences, such as when you&apos;ve dismissed our announcement banner, to provide a better browsing experience. This data is stored on your device and is not transmitted back to our servers.</li>
               </ul>
               <p>
-                When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies and storage technologies you accept. You can change these preferences at any time.
+                When you first visit our website, you&apos;ll see a cookie consent banner where you can choose which types of cookies and storage technologies you accept. You can change these preferences at any time.
               </p>
 
               <h4 className="text-xl font-bold mt-8 mb-4">6. Data Storage, Retention and Disposal</h4>

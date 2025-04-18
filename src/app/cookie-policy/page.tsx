@@ -31,7 +31,7 @@ export default function CookiePolicyPage() {
                 <strong>Local Storage</strong> is a web storage technology that allows websites to store data in your browser with no expiration date. Unlike cookies, local storage data is not sent to the server with each request but remains in your browser until explicitly cleared.
               </p>
               <p className="mt-4">
-                Both technologies help us improve our website's functionality and enhance your user experience.
+                Both technologies help us improve our website&apos;s functionality and enhance your user experience.
               </p>
 
               <h4 className="text-xl font-bold mt-8 mb-4">2. Types of Storage Technologies We Use</h4>
@@ -53,7 +53,7 @@ export default function CookiePolicyPage() {
                 <li className="mb-2">Enhance website functionality and improve your user experience.</li>
                 <li className="mb-2">Analyse site traffic and track usage patterns to improve site performance.</li>
                 <li className="mb-2">Remember your choices and personalise your experience on our website.</li>
-                <li className="mb-2">Manage notification preferences, such as remembering when you've dismissed our announcement banner.</li>
+                <li className="mb-2">Manage notification preferences, such as remembering when you&apos;ve dismissed our announcement banner.</li>
                 <li className="mb-2">Deliver relevant content and measure the effectiveness of our campaigns.</li>
               </ul>
 
@@ -62,7 +62,7 @@ export default function CookiePolicyPage() {
                 We use local storage for functional purposes, including:
               </p>
               <ul className="list-disc ml-6 mb-6">
-                <li className="mb-2"><strong>Announcement Banner Preferences</strong>: We store a timestamp when you close our announcement banner so we don't show it again for 24 hours, providing a better browsing experience.</li>
+                <li className="mb-2"><strong>Announcement Banner Preferences</strong>: We store a timestamp when you close our announcement banner so we don&apos;t show it again for 24 hours, providing a better browsing experience.</li>
                 <li className="mb-2"><strong>User Preferences</strong>: We may store certain interface preferences to enhance your experience on return visits.</li>
               </ul>
               <p>
@@ -71,15 +71,15 @@ export default function CookiePolicyPage() {
 
               <h4 className="text-xl font-bold mt-8 mb-4">5. Third-Party Cookies</h4>
               <p>
-                We may allow certain trusted third parties to place cookies on our website to help us understand user behaviour, improve our website's functionality, and deliver relevant content. These third parties include analytics providers like Google Analytics. Please refer to their privacy policies for more information on how they use cookies.
+                We may allow certain trusted third parties to place cookies on our website to help us understand user behaviour, improve our website&apos;s functionality, and deliver relevant content. These third parties include analytics providers like Google Analytics. Please refer to their privacy policies for more information on how they use cookies.
               </p>
 
               <h4 className="text-xl font-bold mt-8 mb-4">6. Your Choices</h4>
               <p>
-                When you first visit our website, you'll see a cookie banner asking for your consent to use certain types of cookies and local storage technologies. You can manage your choices at any time by adjusting your browser settings to accept or decline cookies. 
+                When you first visit our website, you&apos;ll see a cookie banner asking for your consent to use certain types of cookies and local storage technologies. You can manage your choices at any time by adjusting your browser settings to accept or decline cookies. 
               </p>
               <p className="mt-4">
-                To clear local storage data, you can use your browser's privacy or history settings to clear browsing data. However, please note that disabling these technologies may affect the functionality of our website.
+                To clear local storage data, you can use your browser&apos;s privacy or history settings to clear browsing data. However, please note that disabling these technologies may affect the functionality of our website.
               </p>
               <p className="mt-4">
                 For more information on managing cookies, you can visit www.aboutcookies.org or www.allaboutcookies.org.

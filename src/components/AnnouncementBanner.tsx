@@ -74,7 +74,7 @@ const AnnouncementBanner = () => {
       <div className="container mx-auto flex items-center justify-between px-4">
         <div className="flex-1 text-center sm:text-left pr-2">
           <p className="font-medium text-gray-800 text-sm sm:text-base">
-            <span className="font-bold">Coming Soon:</span> We're planning a closed pilot! {' '}
+            <span className="font-bold">Coming Soon:</span> We&apos;re planning a closed pilot! {' '}
             <Link href="/signup" className="underline font-semibold hover:text-[var(--primary)]">
               Sign up now
             </Link> {' '}
