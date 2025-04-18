@@ -27,6 +27,7 @@ export default function PrivacyPolicyPage() {
                 <li className="mb-2"><strong>Personal Details</strong>: Name, email address, and other information you voluntarily provide when completing our sign-up forms.</li>
                 <li className="mb-2"><strong>Organisational Information</strong>: If you represent a charity, we may collect data such as organisation name, address, and contact details of representatives to facilitate our services.</li>
                 <li className="mb-2"><strong>Technical Data</strong>: When you use our website, we may automatically collect information such as your IP address, browser type, operating system, and interaction with the website. We use cookies and similar tracking technologies to collect this information. Please see our Cookie Policy for more details.</li>
+                <li className="mb-2"><strong>Local Storage Data</strong>: We store certain preferences and settings in your browser's local storage, such as notification preferences and interface settings, to enhance your user experience. This information is stored on your device and is not transmitted to our servers.</li>
               </ul>
 
               <h4 className="text-xl font-bold mt-8 mb-4">2. How we use your information</h4>
@@ -38,6 +39,7 @@ export default function PrivacyPolicyPage() {
                 <li className="mb-2">To facilitate volunteer matches for charities, helping connect volunteers with specific organisational needs.</li>
                 <li className="mb-2">To share relevant volunteer data with charities and charity information with volunteers to establish a working relationship and meet volunteering needs.</li>
                 <li className="mb-2">To improve our website, user experience, and offerings.</li>
+                <li className="mb-2">To remember your preferences and provide a personalized experience, including through the use of local storage for features like our announcement banner.</li>
                 <li className="mb-2">To respond to your inquiries, manage subscriptions, and provide customer support.</li>
                 <li className="mb-2">For internal analysis and research to understand user interests and to enhance our services.</li>
               </ul>
@@ -48,20 +50,32 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul className="list-disc ml-6 mb-6">
                 <li className="mb-2"><strong>Consent</strong>: We obtain your consent for marketing communications and updates via email.</li>
-                <li className="mb-2"><strong>Lawful Interests</strong>: Processing is necessary for improving and operating our website, sharing volunteer data with charities and vice versa, and facilitating volunteer matching.</li>
+                <li className="mb-2"><strong>Legitimate Interests</strong>: Processing is necessary for improving and operating our website, sharing volunteer data with charities and vice versa, facilitating volunteer matching, and remembering your preferences to enhance user experience.</li>
               </ul>
 
               <h4 className="text-xl font-bold mt-8 mb-4">4. Data Sharing Between Volunteers and Charities</h4>
               <p>
-                We share relevant volunteer data with charities and relevant charity data with volunteers as part of the Voluntiera platform&apos;s functionality. This data sharing is strictly for the purposes of connecting volunteers with organisations that align with their interests and skills. All parties are required to respect data confidentiality as outlined in this Privacy Policy.
+                We share relevant volunteer data with charities and relevant charity data with volunteers as part of the Voluntiera platform's functionality. This data sharing is strictly for the purposes of connecting volunteers with organisations that align with their interests and skills. All parties are required to respect data confidentiality as outlined in this Privacy Policy.
               </p>
 
-              <h4 className="text-xl font-bold mt-8 mb-4">5. Data Storage, Retention and Disposal</h4>
+              <h4 className="text-xl font-bold mt-8 mb-4">5. Browser Storage Technologies</h4>
               <p>
-                We store your data securely and retain it only as long as necessary to fulfil the purposes for which it was collected or as required by law. If you wish to delete your information, please contact us at [contact@voluntiera.org].
+                We use various browser storage technologies, including cookies and local storage, to enhance your experience on our website:
+              </p>
+              <ul className="list-disc ml-6 mb-6">
+                <li className="mb-2"><strong>Cookies</strong>: These are small text files that are stored on your device and help us provide essential features and analyze website usage. See our Cookie Policy for more details.</li>
+                <li className="mb-2"><strong>Local Storage</strong>: We use browser local storage to remember your preferences, such as when you've dismissed our announcement banner, to provide a better browsing experience. This data is stored on your device and is not transmitted back to our servers.</li>
+              </ul>
+              <p>
+                When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies and storage technologies you accept. You can change these preferences at any time.
               </p>
 
-              <h4 className="text-xl font-bold mt-8 mb-4">6. Your Data Protection Rights</h4>
+              <h4 className="text-xl font-bold mt-8 mb-4">6. Data Storage, Retention and Disposal</h4>
+              <p>
+                We store your data securely and retain it only as long as necessary to fulfil the purposes for which it was collected or as required by law. If you wish to delete your information, please contact us at hello@voluntiera.co.uk.
+              </p>
+
+              <h4 className="text-xl font-bold mt-8 mb-4">7. Your Data Protection Rights</h4>
               <p className="mb-4">
                 Under UK GDPR, you have rights including:
               </p>
@@ -75,30 +89,30 @@ export default function PrivacyPolicyPage() {
               </ul>
 
               <p>
-                To exercise any of these rights, please contact us at [contact@voluntiera.org].
+                To exercise any of these rights, please contact us at hello@voluntiera.co.uk.
               </p>
 
-              <h4 className="text-xl font-bold mt-8 mb-4">7. Data Security</h4>
+              <h4 className="text-xl font-bold mt-8 mb-4">8. Data Security</h4>
               <p>
                 We implement appropriate security measures to protect your personal information from unauthorised access, alteration, disclosure, or destruction. While we strive to protect your data, we cannot guarantee its absolute security.
               </p>
 
-              <h4 className="text-xl font-bold mt-8 mb-4">8. Cookies</h4>
+              <h4 className="text-xl font-bold mt-8 mb-4">9. Cookies and Local Storage</h4>
               <p>
-                Our website uses cookies to collect information about your browsing activities. You can adjust your browser settings to refuse cookies, but note that this may affect website functionality. For more details, please see our Cookie Policy.
+                Our website uses cookies and local storage to collect information about your browsing activities and remember your preferences. You can adjust your browser settings to refuse cookies or clear local storage data, but note that this may affect website functionality. For more details, please see our Cookie Policy.
               </p>
 
-              <h4 className="text-xl font-bold mt-8 mb-4">9. Changes to This Privacy Policy</h4>
+              <h4 className="text-xl font-bold mt-8 mb-4">10. Changes to This Privacy Policy</h4>
               <p>
                 We may update this Privacy Policy to reflect changes to our practices. Any updates will be posted on this page, and we encourage you to review it periodically.
               </p>
 
-              <h4 className="text-xl font-bold mt-8 mb-4">10. Contact Us</h4>
+              <h4 className="text-xl font-bold mt-8 mb-4">11. Contact Us</h4>
               <p>
                 If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at:
               </p>
               <ul className="list-none ml-6 mb-6">
-                <li className="mb-2"><strong>Email:</strong> [contact@voluntiera.org]</li>
+                <li className="mb-2"><strong>Email:</strong> hello@voluntiera.co.uk</li>
               </ul>
 
               <p className="font-semibold mt-8">

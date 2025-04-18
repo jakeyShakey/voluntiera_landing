@@ -7,14 +7,10 @@ import Link from 'next/link';
 export default function RegisterCharityPage() {
   const [formData, setFormData] = useState({
     charityName: '',
-    charityNumber: '',
     contactName: '',
     contactRole: '',
     email: '',
     phone: '',
-    location: '',
-    volunteerNeeds: '',
-    additionalInfo: '',
     agreedToTerms: false
   });
   
@@ -40,14 +36,10 @@ export default function RegisterCharityPage() {
         .insert([
           {
             charity_name: formData.charityName,
-            charity_number: formData.charityNumber || null,
             contact_name: formData.contactName,
             contact_role: formData.contactRole,
             email: formData.email,
             phone: formData.phone || null,
-            location: formData.location,
-            volunteer_needs: formData.volunteerNeeds,
-            additional_info: formData.additionalInfo || null,
             agreed_to_terms: formData.agreedToTerms
           }
         ]);
@@ -57,14 +49,10 @@ export default function RegisterCharityPage() {
       // Clear form
       setFormData({
         charityName: '',
-        charityNumber: '',
         contactName: '',
         contactRole: '',
         email: '',
         phone: '',
-        location: '',
-        volunteerNeeds: '',
-        additionalInfo: '',
         agreedToTerms: false
       });
       
@@ -124,21 +112,6 @@ export default function RegisterCharityPage() {
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                   placeholder="Your organization&apos;s name"
-                />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="charityNumber" className="block text-gray-700 font-semibold mb-2">
-                  Charity Registration Number (if applicable)
-                </label>
-                <input
-                  type="text"
-                  id="charityNumber"
-                  name="charityNumber"
-                  value={formData.charityNumber}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-                  placeholder="Optional"
                 />
               </div>
 
@@ -203,53 +176,6 @@ export default function RegisterCharityPage() {
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                   placeholder="Optional"
                 />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="location" className="block text-gray-700 font-semibold mb-2">
-                  Location
-                </label>
-                <input
-                  type="text"
-                  id="location"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-                  placeholder="City, Country"
-                />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="volunteerNeeds" className="block text-gray-700 font-semibold mb-2">
-                  What type of volunteer help do you need?
-                </label>
-                <textarea
-                  id="volunteerNeeds"
-                  name="volunteerNeeds"
-                  value={formData.volunteerNeeds}
-                  onChange={handleChange}
-                  rows={4}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-                  placeholder="Describe the volunteer roles or support you&apos;re looking for..."
-                ></textarea>
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="additionalInfo" className="block text-gray-700 font-semibold mb-2">
-                  Additional Information (optional)
-                </label>
-                <textarea
-                  id="additionalInfo"
-                  name="additionalInfo"
-                  value={formData.additionalInfo}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-                  placeholder="Any other information you&apos;d like to share..."
-                ></textarea>
               </div>
 
               <div className="mb-6">

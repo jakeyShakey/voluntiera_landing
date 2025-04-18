@@ -7,10 +7,10 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-32">
+    <section className="bg-white pt-8 md:pt-16 pb-20 md:pb-32">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-1/2 mb-12 md:mb-0">
+          <div className="w-full md:w-1/2 mt-4 md:mt-0 mb-0 md:mb-0 order-2 md:order-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const HeroSection = () => {
               </div>
             </motion.div>
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 order-1 md:order-2 mb-4 md:mb-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}

@@ -8,10 +8,6 @@ export default function SignupPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    userType: '',
-    organization: '',
-    location: '',
-    message: '',
     agreedToTerms: false
   });
   
@@ -38,10 +34,6 @@ export default function SignupPage() {
           {
             name: formData.name,
             email: formData.email,
-            user_type: formData.userType,
-            organization: formData.organization || null,
-            location: formData.location,
-            message: formData.message || null,
             agreed_to_terms: formData.agreedToTerms
           }
         ]);
@@ -52,10 +44,6 @@ export default function SignupPage() {
       setFormData({
         name: '',
         email: '',
-        userType: '',
-        organization: '',
-        location: '',
-        message: '',
         agreedToTerms: false
       });
       
@@ -133,71 +121,6 @@ export default function SignupPage() {
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                   placeholder="john@example.com"
                 />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="userType" className="block text-gray-700 font-semibold mb-2">
-                  I am a
-                </label>
-                <select
-                  id="userType"
-                  name="userType"
-                  value={formData.userType}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-                >
-                  <option value="">Please select...</option>
-                  <option value="volunteer">Volunteer</option>
-                  <option value="charity">Charity Representative</option>
-                  <option value="both">Both</option>
-                </select>
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="organization" className="block text-gray-700 font-semibold mb-2">
-                  Organization Name (if applicable)
-                </label>
-                <input
-                  type="text"
-                  id="organization"
-                  name="organization"
-                  value={formData.organization}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-                  placeholder="Charity name (if you represent a charity)"
-                />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="location" className="block text-gray-700 font-semibold mb-2">
-                  Location
-                </label>
-                <input
-                  type="text"
-                  id="location"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-                  placeholder="City, Country"
-                />
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
-                  Why are you interested in joining our pilot? (optional)
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
-                  placeholder="Tell us a bit about your interest in Voluntiera..."
-                ></textarea>
               </div>
 
               <div className="mb-6">

@@ -8,6 +8,8 @@
   --primary-dark: hsla(167.9, 86.11%, 18.24%, 1);
   --secondary: #f8f9fa;
   --accent: #ffd166;
+  --navbar-height: 72px;
+  --banner-height: 46px;
 }
 
 @theme inline {
@@ -61,6 +63,23 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* Ensure content adjusts for fixed elements */
+main {
+  min-height: calc(100vh - var(--navbar-height));
+  padding-top: var(--navbar-height);
+  transition: padding-top 0.3s ease;
+}
+
+/* Add padding for the banner when it's visible */
+.banner-visible main {
+  padding-top: calc(var(--navbar-height) + var(--banner-height));
+}
+
+/* Hide banner on page load */
+.banner-hidden main {
+  margin-top: 0;
 }
 
 @tailwind base;

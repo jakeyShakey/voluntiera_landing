@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { supabase } from '@/lib/supabase';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -29,34 +30,20 @@ export default function ContactPage() {
     setSubmitError('');
     
     try {
-      // Create FormData object to send to FormSubmit
-      const form = e.target as HTMLFormElement;
-      const formDataObj = new FormData(form);
+      // Use Supabase to insert the form data
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            created_at: new Date().toISOString(),
+          }
+        ]);
       
-      // Add form data manually to ensure all fields are included
-      formDataObj.append('name', formData.name);
-      formDataObj.append('email', formData.email);
-      formDataObj.append('subject', formData.subject);
-      formDataObj.append('message', formData.message);
-      
-      // Add FormSubmit configuration fields
-      formDataObj.append('_captcha', 'true');
-      formDataObj.append('_subject', `New Contact Form: ${formData.subject}`);
-      formDataObj.append('_template', 'table');
-      formDataObj.append('_replyto', formData.email);
-      
-      // Send to FormSubmit service
-      const response = await fetch('https://formsubmit.co/ajax/hello@voluntiera.co.uk', {
-        method: 'POST',
-        body: formDataObj,
-        headers: {
-          'Accept': 'application/json',
-        },
-      });
-      
-      if (!response.ok) {
-        throw new Error('Form submission failed');
-      }
+      if (error) throw error;
       
       setSubmitSuccess(true);
       setFormData({
@@ -74,7 +61,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24">
+    <div>
       {/* Hero Section */}
       <section className="py-16 bg-[var(--primary)]">
         <div className="container mx-auto px-4 text-center">
@@ -105,12 +92,6 @@ export default function ContactPage() {
                         {submitError}
                       </div>
                     )}
-                    
-                    {/* FormSubmit configuration fields */}
-                    <input type="hidden" name="_captcha" value="true" />
-                    <input type="hidden" name="_subject" value={`New Contact Form: ${formData.subject}`} />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_replyto" value={formData.email} />
                     
                     <div className="mb-4">
                       <label htmlFor="name" className="block text-gray-700 font-medium mb-2">

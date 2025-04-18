@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -13,9 +14,16 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm fixed w-full z-50">
+    <header className="bg-white shadow-sm fixed w-full top-0 left-0 right-0 z-50">
       <div className="container mx-auto flex justify-between items-center py-4">
         <Link href="/" className="flex items-center">
+          <Image 
+            src="/voluntiera-logo.png"
+            alt="Voluntiera Logo"
+            width={40}
+            height={40}
+            className="mr-2"
+          />
           <h1 className="text-3xl font-bold text-[var(--primary)]">Voluntiera</h1>
         </Link>
 

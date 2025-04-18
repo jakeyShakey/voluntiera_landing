@@ -14,7 +14,7 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 order-2 md:order-1 mt-4 md:mt-0">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">For Volunteers</h2>
               <p className="text-lg mb-6 text-gray-600 leading-relaxed">
                 For individuals passionate about supporting others and their communities,
@@ -47,7 +47,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="w-full md:w-1/2 relative h-[400px]">
+            <div className="w-full md:w-1/2 relative h-[400px] order-1 md:order-2 mb-4 md:mb-0">
               <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xl">
                 {/* Next.js Image component for volunteer image */}
                 <Image 
@@ -66,8 +66,8 @@ export default function Home() {
       {/* For Charities Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-            <div className="w-full md:w-1/2">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-1/2 order-2 md:order-2 mt-4 md:mt-0">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">For Charities</h2>
               <p className="text-lg mb-6 text-gray-600 leading-relaxed">
                 Connect with passionate volunteers who want to make a difference and have skills that match your needs. 
@@ -95,7 +95,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="w-full md:w-1/2 relative h-[400px]">
+            <div className="w-full md:w-1/2 relative h-[400px] order-1 md:order-1 mb-4 md:mb-0">
               <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xl">
                 {/* Next.js Image component for charity image */}
                 <Image 
