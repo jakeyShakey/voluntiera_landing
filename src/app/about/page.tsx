@@ -105,57 +105,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section> */}
-
-      {/* Team Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Team Member 1 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <div className="bg-[var(--primary-light)] h-48 flex items-center justify-center">
-                <span className="text-white">Founder Image</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">John Smith</h3>
-                <p className="text-[var(--primary)] font-semibold mb-3">Co-Founder & CEO</p>
-                <p className="text-gray-600">
-                  With a background in tech and nonprofit work, John brings a unique perspective to Voluntiera.
-                </p>
-              </div>
-            </div>
-            
-            {/* Team Member 2 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <div className="bg-[var(--primary-light)] h-48 flex items-center justify-center">
-                <span className="text-white">Founder Image</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Emma Johnson</h3>
-                <p className="text-[var(--primary)] font-semibold mb-3">Co-Founder & CTO</p>
-                <p className="text-gray-600">
-                  Emma&apos;s expertise in technology and passion for social impact drives our platform development.
-                </p>
-              </div>
-            </div>
-            
-            {/* Team Member 3 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <div className="bg-[var(--primary-light)] h-48 flex items-center justify-center">
-                <span className="text-white">Team Member Image</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Michael Chen</h3>
-                <p className="text-[var(--primary)] font-semibold mb-3">Head of Partnerships</p>
-                <p className="text-gray-600">
-                  Michael works closely with charities to ensure Voluntiera meets their evolving needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 } 
