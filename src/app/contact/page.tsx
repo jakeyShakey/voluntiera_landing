@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { supabase } from '@/lib/supabase';
 
 export default function ContactPage() {
@@ -44,6 +44,30 @@ export default function ContactPage() {
         ]);
       
       if (error) throw error;
+
+      // Send email notification using our API route
+      try {
+        const emailResponse = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+          }),
+        });
+
+        if (!emailResponse.ok) {
+          // Email failed but form submission was successful
+          // In production, you might want to log this to a monitoring service
+        }
+      } catch (emailError) {
+        // Email sending failed but form submission was successful
+        // In production, you might want to log this to a monitoring service
+      }
       
       setSubmitSuccess(true);
       setFormData({
@@ -183,13 +207,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4">
-                    <FaPhone className="text-2xl mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                      <p>+44 (0) 123 456 7890</p>
-                    </div>
-                  </div>
+
                   
                   <div className="flex items-start gap-4">
                     <FaMapMarkerAlt className="text-2xl mt-1" />

@@ -101,9 +101,17 @@ export default function VolunteersPage() {
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Join Voluntiera today and find opportunities to make a difference in your community.
           </p>
-          <Link href="/signup" className="btn-primary bg-white text-[var(--primary)] hover:bg-gray-100">
-            Sign Up Now
-          </Link>
+          <div className="space-y-4">
+            <Link href="/signup" className="btn-primary bg-white text-[var(--primary)] hover:bg-gray-100">
+              Sign Up Now
+            </Link>
+            <div className="mt-8">
+              <p className="text-white mb-4">Help us build the perfect platform for you!</p>
+              <Link href="/volunteer-survey" className="btn-primary bg-transparent border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]">
+                Take Our Survey
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

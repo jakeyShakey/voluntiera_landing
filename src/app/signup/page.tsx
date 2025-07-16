@@ -170,6 +170,17 @@ export default function SignupPage() {
                 </p>
               </div>
             )}
+
+            {/* Survey Link */}
+            <div className="mt-12 p-6 bg-blue-50 rounded-lg text-center">
+              <h3 className="text-xl font-semibold mb-3 text-[var(--primary)]">Help Us Build Better</h3>
+              <p className="text-gray-700 mb-4">
+                Want to help us understand what volunteers really need? Take our quick survey to share your thoughts and preferences.
+              </p>
+              <Link href="/volunteer-survey" className="btn-primary bg-[var(--primary)] text-white hover:bg-[var(--primary-dark)]">
+                Take the Survey
+              </Link>
+            </div>
           </div>
         </div>
       </section>
