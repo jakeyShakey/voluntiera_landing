@@ -2,7 +2,6 @@
 
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { supabase } from '@/lib/supabase';
-import Link from 'next/link';
 
 interface FormData {
   // Question 1
@@ -270,13 +269,13 @@ export default function VolunteerSurveyPage() {
                     <input
                       type="radio"
                       name="currentVolunteeringFrequency"
-                      value="I don't volunteer"
-                      checked={formData.currentVolunteeringFrequency === "I don't volunteer"}
+                      value="I don&apos;t volunteer"
+                      checked={formData.currentVolunteeringFrequency === "I don&apos;t volunteer"}
                       onChange={handleChange}
                       required
                       className="mr-3"
                     />
-                    <span>I don't volunteer</span>
+                    <span>I don&apos;t volunteer</span>
                   </label>
                   <label className="flex items-center">
                     <input
@@ -333,7 +332,7 @@ export default function VolunteerSurveyPage() {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">4. How have you accessed volunteering in the past? (multiple choice)</h3>
                 <div className="space-y-2">
-                  {["I haven't", "Through work", "Through school or university", "Other"].map((option) => (
+                  {["I haven&apos;t", "Through work", "Through school or university", "Other"].map((option) => (
                     <label key={option} className="flex items-center">
                       <input
                         type="checkbox"
@@ -517,7 +516,7 @@ export default function VolunteerSurveyPage() {
 
               {/* Question 11 */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">11. Are there any specific causes you're passionate about supporting?</h3>
+                <h3 className="text-xl font-semibold mb-4">11. Are there any specific causes you&apos;re passionate about supporting?</h3>
                 <textarea
                   name="specificCauses"
                   value={formData.specificCauses}
