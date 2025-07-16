@@ -64,7 +64,7 @@ export default function ContactPage() {
           // Email failed but form submission was successful
           // In production, you might want to log this to a monitoring service
         }
-      } catch (error) {
+      } catch {
         // Email sending failed but form submission was successful
         // In production, you might want to log this to a monitoring service
       }
