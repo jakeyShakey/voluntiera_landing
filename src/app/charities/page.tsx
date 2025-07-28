@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaUserPlus, FaChartLine, FaClipboardList } from 'react-icons/fa';
+import CharityRegistrationForm from '@/components/CharityRegistrationForm';
 
 export default function CharitiesPage() {
   return (
@@ -94,29 +95,12 @@ export default function CharitiesPage() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-[var(--primary-light)] rounded-lg p-8 md:p-12 text-white">
-            <p className="text-xl mb-6 leading-relaxed italic">
-              &quot;Voluntiera has transformed how we find and manage volunteers. We&apos;ve been able to connect with skilled 
-              individuals who are passionate about our cause, and the platform makes coordination simple and efficient.&quot;
-            </p>
-            <p className="font-semibold">- Sarah Johnson, Executive Director at Community Hope Foundation</p>
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-[var(--primary)]">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Join Our Network of Charities</h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Register your organization today and connect with passionate volunteers ready to support your cause.
-          </p>
-          <Link href="/register-charity" className="btn-primary bg-white text-[var(--primary)] hover:bg-gray-100">
-            Register Your Charity
-          </Link>
+
+      {/* Registration Form Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <CharityRegistrationForm />
         </div>
       </section>
     </div>

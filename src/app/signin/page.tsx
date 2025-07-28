@@ -1,14 +1,33 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaRegClock, FaUserPlus, FaBuilding } from 'react-icons/fa';
-import { Metadata } from 'next';
+"use client";
 
-export const metadata: Metadata = {
-  title: 'Sign In | Voluntiera',
-  description: 'Sign in to Voluntiera - Connect volunteers with charities for impactful opportunities.',
-};
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { FaRegClock, FaUserPlus, FaBuilding, FaEnvelope, FaUser, FaHandshake } from 'react-icons/fa';
 
 export default function SignInPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    userType: 'individual'
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend
+    console.log('Stay in touch form submitted:', formData);
+    setIsSubmitted(true);
+    setFormData({ name: '', email: '', userType: 'individual' });
+  };
+
   return (
     <main className="pt-28 pb-16">
       <div className="container mx-auto px-4 max-w-3xl">
@@ -32,6 +51,86 @@ export default function SignInPage() {
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Stay in Touch Form */}
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
+              <div className="flex items-center mb-4">
+                <FaEnvelope className="text-[var(--primary)] text-xl mr-3" />
+                <h2 className="text-xl font-semibold text-gray-800">Stay in Touch</h2>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Be the first to know when our platform launches! Enter your details below and we&apos;ll keep you updated on our progress.
+              </p>
+              
+              {isSubmitted ? (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                  <div className="flex items-center">
+                    <FaHandshake className="text-green-500 text-lg mr-2" />
+                    <p className="text-green-700 font-medium">Thank you! We&apos;ll be in touch soon.</p>
+                  </div>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        <FaUser className="inline mr-1" />
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        <FaEnvelope className="inline mr-1" />
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                        placeholder="Enter your email address"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="userType" className="block text-sm font-medium text-gray-700 mb-2">
+                      I am a:
+                    </label>
+                    <select
+                      id="userType"
+                      name="userType"
+                      value={formData.userType}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                    >
+                      <option value="individual">Individual (Volunteer)</option>
+                      <option value="charity">Charity/Organization</option>
+                    </select>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    className="w-full bg-[var(--primary)] text-white py-3 px-6 rounded-md font-medium hover:bg-[var(--primary)]/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2"
+                  >
+                    Stay Updated
+                  </button>
+                </form>
+              )}
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">

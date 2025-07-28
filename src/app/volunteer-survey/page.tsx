@@ -542,7 +542,7 @@ export default function VolunteerSurveyPage() {
 
               {/* Question 13 */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Thank you so much for your inputs we really appreciate it! Would you be willing to be sent future surveys? (totally fine if not)</h3>
+                <h3 className="text-xl font-semibold mb-4">Thank you so much for your inputs we really appreciate it! Would you be willing to be sent future surveys?</h3>
                 <div className="space-y-2 mb-4">
                   <label className="flex items-center">
                     <input

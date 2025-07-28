@@ -26,8 +26,8 @@ export default function Home() {
                     <FaHandshake className="text-[var(--primary)] text-2xl" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Find Meaningful Opportunities</h3>
-                    <p className="text-gray-600">Get reccomended opportunities based on your skills and interests. No endless scrollig through job boards.</p>
+                    <h3 className="text-xl font-semibold mb-2">Find Meaningful One-Off Opportunities</h3>
+                    <p className="text-gray-600">Get reccomended opportunities based on your skills and interests with no need for a long term commitment. Support all of the causes you care about, not just one.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -71,7 +71,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">For Charities</h2>
               <p className="text-lg mb-6 text-gray-600 leading-relaxed">
                 Connect with passionate volunteers who want to make a difference and have skills that match your needs. 
-                Our platform simplifies volunteer management, allowing you to focus on making a difference instead of admin.
+                Our platform simplifies volunteer management, allowing you to focus on impact instead of admin.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">

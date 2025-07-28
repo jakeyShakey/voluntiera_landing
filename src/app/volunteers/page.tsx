@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaSearch, FaCalendarAlt, FaUsers } from 'react-icons/fa';
+import VolunteerRegistrationForm from '@/components/VolunteerRegistrationForm';
 
 export default function VolunteersPage() {
   return (
@@ -94,24 +95,10 @@ export default function VolunteersPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-[var(--primary)]">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Get Started?</h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Join Voluntiera today and find opportunities to make a difference in your community.
-          </p>
-          <div className="space-y-4">
-            <Link href="/signup" className="btn-primary bg-white text-[var(--primary)] hover:bg-gray-100">
-              Sign Up Now
-            </Link>
-            <div className="mt-8">
-              <p className="text-white mb-4">Help us build the perfect platform for you!</p>
-              <Link href="/volunteer-survey" className="btn-primary bg-transparent border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]">
-                Take Our Survey
-              </Link>
-            </div>
-          </div>
+      {/* Registration Form Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <VolunteerRegistrationForm />
         </div>
       </section>
     </div>
