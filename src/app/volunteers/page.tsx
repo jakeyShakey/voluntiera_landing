@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { FaSearch, FaCalendarAlt, FaUsers } from 'react-icons/fa';
 import VolunteerRegistrationForm from '@/components/VolunteerRegistrationForm';
 

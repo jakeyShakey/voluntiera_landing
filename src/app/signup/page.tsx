@@ -11,7 +11,7 @@ export default function SignupPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4 text-[var(--primary)]">Join Voluntiera</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose how you'd like to get involved with our platform. Whether you're looking to volunteer or represent a charity, we have the right path for you.
+            Choose how you&apos;d like to get involved with our platform. Whether you&apos;re looking to volunteer or represent a charity, we have the right path for you.
           </p>
         </div>
         

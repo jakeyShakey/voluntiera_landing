@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { FaRegClock, FaUserPlus, FaBuilding, FaEnvelope, FaUser, FaHandshake } from 'react-icons/fa';
+import { FaRegClock, FaEnvelope, FaUser, FaHandshake } from 'react-icons/fa';
 import { supabase } from '@/lib/supabase';
 
 export default function SignInPage() {
