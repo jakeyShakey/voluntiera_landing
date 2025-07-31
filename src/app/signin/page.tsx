@@ -3,29 +3,83 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaRegClock, FaUserPlus, FaBuilding, FaEnvelope, FaUser, FaHandshake } from 'react-icons/fa';
+import { supabase } from '@/lib/supabase';
 
 export default function SignInPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    userType: 'individual'
+    userType: 'individual',
+    marketingConsent: false,
+    termsConsent: false,
+    privacyConsent: false
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Stay in touch form submitted:', formData);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', userType: 'individual' });
+    setError('');
+    
+    // Validate required consents
+    if (!formData.termsConsent || !formData.privacyConsent) {
+      setError('Please accept the Terms & Conditions and Privacy Policy to continue.');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Use Supabase directly like your other forms
+      const { error } = await supabase
+        .from('stay_in_touch_signups')
+        .insert([
+          {
+            name: formData.name.trim(),
+            email: formData.email.toLowerCase().trim(),
+            user_type: formData.userType,
+            marketing_consent: formData.marketingConsent,
+            terms_consent: formData.termsConsent,
+            privacy_consent: formData.privacyConsent,
+          }
+        ]);
+
+      if (error) {
+        console.error('Supabase error:', error);
+        
+        // Handle duplicate email
+        if (error.code === '23505') {
+          throw new Error('This email is already registered');
+        }
+        
+        throw new Error('Failed to save signup information');
+      }
+      
+      setIsSubmitted(true);
+      setFormData({ 
+        name: '', 
+        email: '', 
+        userType: 'individual',
+        marketingConsent: false,
+        termsConsent: false,
+        privacyConsent: false
+      });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -42,12 +96,9 @@ export default function SignInPage() {
                   <FaRegClock className="text-blue-500 text-xl" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-semibold text-blue-700 mb-2">Closed Pilot Coming Soon</h2>
+                  <h2 className="text-xl font-semibold text-blue-700 mb-2">Coming Soon</h2>
                   <p className="text-gray-700 mb-4">
-                    We&apos;re currently preparing for our closed pilot program. Sign-in functionality will be available once the pilot launches.
-                  </p>
-                  <p className="text-gray-700 mb-2">
-                    Interested in participating? Please register your interest by signing up as a:
+                    We&apos;re currently preparing for our closed pilot program. Sign-in functionality will be available once the pilot launches. In the meantime, sign up below to stay updated with what we&apos;re working on.
                   </p>
                 </div>
               </div>
@@ -72,6 +123,12 @@ export default function SignInPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                      <p className="text-red-700 text-sm">{error}</p>
+                    </div>
+                  )}
+                  
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -85,7 +142,8 @@ export default function SignInPage() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                        disabled={isSubmitting}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder="Enter your full name"
                       />
                     </div>
@@ -101,7 +159,8 @@ export default function SignInPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                        disabled={isSubmitting}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder="Enter your email address"
                       />
                     </div>
@@ -116,59 +175,96 @@ export default function SignInPage() {
                       name="userType"
                       value={formData.userType}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                      disabled={isSubmitting}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                     >
                       <option value="individual">Individual (Volunteer)</option>
                       <option value="charity">Charity/Organization</option>
                     </select>
                   </div>
+
+                  {/* Consent Checkboxes */}
+                  <div className="space-y-3 border-t border-gray-200 pt-4">
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="marketingConsent"
+                        name="marketingConsent"
+                        checked={formData.marketingConsent}
+                        onChange={handleInputChange}
+                        disabled={isSubmitting}
+                        className="mt-1 h-4 w-4 text-[var(--primary)] focus:ring-[var(--primary)] border-gray-300 rounded disabled:cursor-not-allowed"
+                      />
+                      <label htmlFor="marketingConsent" className="ml-3 text-sm text-gray-700">
+                        Yes, sign me up to receive updates about Voluntiera&apos;s platform launch and opportunities
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="termsConsent"
+                        name="termsConsent"
+                        checked={formData.termsConsent}
+                        onChange={handleInputChange}
+                        disabled={isSubmitting}
+                        className="mt-1 h-4 w-4 text-[var(--primary)] focus:ring-[var(--primary)] border-gray-300 rounded disabled:cursor-not-allowed"
+                        required
+                      />
+                      <label htmlFor="termsConsent" className="ml-3 text-sm text-gray-700">
+                        I accept the{' '}
+                        <Link href="/terms" target="_blank" className="text-[var(--primary)] hover:underline">
+                          Terms & Conditions
+                        </Link>
+                        {' '}<span className="text-red-500">*</span>
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="privacyConsent"
+                        name="privacyConsent"
+                        checked={formData.privacyConsent}
+                        onChange={handleInputChange}
+                        disabled={isSubmitting}
+                        className="mt-1 h-4 w-4 text-[var(--primary)] focus:ring-[var(--primary)] border-gray-300 rounded disabled:cursor-not-allowed"
+                        required
+                      />
+                      <label htmlFor="privacyConsent" className="ml-3 text-sm text-gray-700">
+                        I accept the{' '}
+                        <Link href="/privacy" target="_blank" className="text-[var(--primary)] hover:underline">
+                          Privacy Policy
+                        </Link>
+                        {' '}<span className="text-red-500">*</span>
+                      </label>
+                    </div>
+                    
+                    <p className="text-xs text-gray-500 mt-2">
+                      <span className="text-red-500">*</span> Required fields
+                    </p>
+                  </div>
                   
                   <button
                     type="submit"
-                    className="w-full bg-[var(--primary)] text-white py-3 px-6 rounded-md font-medium hover:bg-[var(--primary)]/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2"
+                    disabled={isSubmitting || !formData.termsConsent || !formData.privacyConsent}
+                    className="w-full bg-[var(--primary)] text-white py-3 px-6 rounded-md font-medium hover:bg-[var(--primary)]/90 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
-                    Stay Updated
+                    {isSubmitting ? 'Submitting...' : 'Stay Updated'}
                   </button>
                 </form>
               )}
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link href="/signup" className="group">
-                <div className="border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:border-[var(--primary)] hover:shadow-md bg-white h-full">
-                  <div className="flex items-center mb-4">
-                    <FaUserPlus className="text-[var(--primary)] text-2xl mr-3" />
-                    <h3 className="text-xl font-semibold">Volunteer</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Register as a volunteer to be notified when the platform launches and get early access to volunteer opportunities.
-                  </p>
-                  <span className="text-[var(--primary)] font-medium group-hover:underline inline-flex items-center">
-                    Register as a volunteer
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
-              
-              <Link href="/register-charity" className="group">
-                <div className="border border-gray-200 rounded-lg p-6 transition-all duration-300 hover:border-[var(--primary)] hover:shadow-md bg-white h-full">
-                  <div className="flex items-center mb-4">
-                    <FaBuilding className="text-[var(--primary)] text-2xl mr-3" />
-                    <h3 className="text-xl font-semibold">Charity</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    Register your charity to join our platform and connect with skilled volunteers who can help with your mission.
-                  </p>
-                  <span className="text-[var(--primary)] font-medium group-hover:underline inline-flex items-center">
-                    Register your charity
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
+            <div className="text-center">
+              <p className="text-gray-600 mb-4">
+                Interested in being part of the pilot program?
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/signup" className="btn-primary">
+                  Join the Pilot Program
+                </Link>
+              </div>
             </div>
             
             <div className="mt-10 text-center">

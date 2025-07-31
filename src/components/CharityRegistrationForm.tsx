@@ -67,9 +67,9 @@ export default function CharityRegistrationForm() {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="mb-8 text-center">
-        <h3 className="text-2xl font-bold mb-4">Register Your Charity</h3>
+        <h3 className="text-2xl font-bold mb-4">Join the Pilot Program</h3>
         <p className="text-gray-700">
-          Join our upcoming pilot program and connect with passionate volunteers.
+        Register your interest in the pilot program to be one of the first organisations to be part of the pilot.
         </p>
       </div>
 
