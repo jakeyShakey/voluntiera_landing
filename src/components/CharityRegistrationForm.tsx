@@ -167,7 +167,7 @@ export default function CharityRegistrationForm() {
               className="mt-1 mr-3"
             />
             <span className="text-gray-700 text-sm">
-              I agree to Voluntiera's <a href="/terms" className="text-[var(--primary)] hover:underline">Terms & Conditions</a> and <a href="/privacy" className="text-[var(--primary)] hover:underline">Privacy Policy</a>.
+              I agree to Voluntiera&apos;s <a href="/terms" className="text-[var(--primary)] hover:underline">Terms & Conditions</a> and <a href="/privacy" className="text-[var(--primary)] hover:underline">Privacy Policy</a>.
             </span>
           </label>
         </div>
@@ -185,7 +185,7 @@ export default function CharityRegistrationForm() {
 
       {submitResult.success && (
         <div className="mt-6 p-4 bg-green-50 text-green-700 rounded-md">
-          Thank you for your interest in Voluntiera! We've received your application and will be in touch when our pilot program launches.
+          Thank you for your interest in Voluntiera! We&apos;ve received your application and will be in touch when our pilot program launches.
         </div>
       )}
 
